@@ -1,22 +1,14 @@
-# productos
-precios = {
-    'pan': 1.40,
-    'huevos': 2.30,
-    'cebolla': 0.85,
-    'aceite': 4.35
+#datos
+nombre = input("Introduce tu nombre: ").strip()
+edad = input("Introduce tu edad: ").strip()
+direccion = input("Introduce tu dirección: ").strip()
+telefono = input("Introduce tu número de teléfono: ").strip()
+
+datos_usuario = {
+    'nombre': nombre,
+    'edad': edad,
+    'direccion': direccion,
+    'telefono': telefono
 }
 
-
-articulo = input("Introduce el nombre del artículo: ").strip().lower()
-cantidad = input("Introduce el número de unidades: ").strip()
-
-if cantidad.isdigit():
-    cantidad = int(cantidad)
-
-    if articulo in precios:
-        total = precios[articulo] * cantidad
-        print(f"El precio total de {cantidad} {articulo}(s) es: {total:.2f}€")
-    else:
-        print("El artículo no está en la lista de precios.")
-else:
-    print("Por favor, introduce un número válido de unidades.")
+print(f"{datos_usuario['nombre']} tiene {datos_usuario['edad']} años, vive en {datos_usuario['direccion']} y su número de teléfono es {datos_usuario['telefono']}.")
